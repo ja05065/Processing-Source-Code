@@ -1,0 +1,47 @@
+```
+int barWidth = 24;
+
+int lastBar = -1;
+
+ 
+
+void setup() 
+
+{
+
+  size(640, 360);
+
+  colorMode(RGB, height, height, height);  
+
+  noStroke();
+
+  background(0);
+
+}
+
+ 
+
+void draw() 
+
+{
+
+  int whichBar = mouseX / barWidth;
+
+  if (whichBar != lastBar) {
+
+    int barX = whichBar * barWidth;
+
+    fill(mouseY, height, height);
+
+    rect(barX, 0, barWidth, height);
+
+    lastBar = whichBar;
+
+  }
+
+}
+
+```
+
+프로세싱 Examples 중 하나인 Hue 라는 코드이다.
+Hue는 마우스의 위치에 따라 나타나는 색이 변하는 프로그램입니다.
