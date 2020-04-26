@@ -1,0 +1,23 @@
+```
+void setup(){
+  size(800,300);
+  textSize(80);
+}
+int i, dir=1, sp=1;
+void draw(){
+  fill(0);
+  background(150,0,255);
+  fill(100,250,0);
+  
+  text("Graphics", i, 200);
+  if(i>width-500) dir=-1;
+  if(i<0) dir=1;
+  i = i+dir*sp;
+}
+void KeyPressed(){
+  sp = key - '0';
+}
+```
+
+간단한 배너를 만드는 코드이다.
+보라색 바탕에 연두색 글씨가 나온다.
